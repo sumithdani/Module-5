@@ -2,11 +2,11 @@
 
 This Python project demonstrates the concept of **Multilevel Inheritance** to collect and display the **name**, **age**, and **location** of a person.
 
-## 🎯 Aim
+##  Aim
 
 To write a Python program that uses multilevel inheritance to get and display a person’s name, age, and location.
 
-## 🧠 Algorithm
+##  Algorithm
 
 1. **Parent Class**  
    - `__init__(name)` initializes the `name` attribute.  
@@ -26,7 +26,29 @@ To write a Python program that uses multilevel inheritance to get and display a 
    - Print all details using class methods.
 
 ## Program
-Add code here
-
+```
+class Person:
+    def get_name(self):
+        self.name = input("Enter Name: ")
+class Age(Person):
+    def get_age(self):
+        self.age = int(input("Enter Age: "))
+class Location(Age):
+    def get_location(self):
+        self.location = input("Enter Location: ")
+    def display(self):
+        print("\nPerson Details")
+        print("Name:", self.name)
+        print("Age:", self.age)
+        print("Location:", self.location)
+obj = Location()
+obj.get_name()
+obj.get_age()
+obj.get_location()
+obj.display()
+```
 ## Sample Output
+<img width="467" height="360" alt="image" src="https://github.com/user-attachments/assets/293df71f-d95b-4594-99e7-ab4c8a7b8922" />
 
+## Result
+Thus, the Python program using Multilevel Inheritance to get and display a person's name, age, and location was executed successfully, and the required details were displayed.
